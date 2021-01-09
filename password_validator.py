@@ -6,7 +6,7 @@ def validate(password):
     upper = string.ascii_uppercase
     lower = string.ascii_lowercase
     special_symols = '!@#$%^&*()-+={[}]\:;<,>.?/'
-    if 8 > len(password) or len(password) < 1:
+    if 8 > len(password):
         return 1
     status = 0
     for c in password:
