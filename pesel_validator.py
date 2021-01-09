@@ -16,5 +16,5 @@ def validate(pesel):
 
     if pesel[10] == suma % 10:
         return 0
-
-    return 4
+    else:
+        return 3
