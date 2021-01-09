@@ -9,8 +9,3 @@ def checkLogin(login):
     if checked_login is None:
         return "2"
     return "0"
-
-
-if __name__ == '__main__':
-    login = "testlogin"
-    print(checkLogin(login))
