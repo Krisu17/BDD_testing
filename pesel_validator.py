@@ -2,19 +2,19 @@ import string
 
 
 def validate(pesel):
-    if 0 <= len(pesel) or len(pesel) > 11:
+    if len(pesel) != 11:
         return 1
 
     for c in pesel:
         if c not in string.digits:
             return 2
 
-    wagi = [1, 3, 7, 9, 1, 3, 7, 9, 1, 3]
+    wagi = [9, 7, 3, 1, 9, 7, 3, 1, 9, 7]
     suma = 0
     for i in range(10):
-        suma += wagi[i] * pesel[i]
+        suma += wagi[i] * int(pesel[i])
 
-    if pesel[10] == suma % 10:
+    if int(pesel[10]) == suma % 10:
         return 0
     else:
         return 3
